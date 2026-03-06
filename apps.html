@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AlshaBill - Alsha Labs</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#0f2027;
+color:white;
+text-align:center;
+}
+
+/* NAVBAR */
+
+nav{
+background:black;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav h2{
+color:white;
+margin:0;
+}
+
+nav a{
+color:yellow;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+/* APP PAGE */
+
+.container{
+padding:50px 20px;
+}
+
+.app-icon{
+width:120px;
+border-radius:25px;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.rating{
+color:gold;
+font-size:22px;
+margin:10px 0;
+}
+
+.info{
+opacity:0.8;
+margin-bottom:25px;
+}
+
+/* BUTTONS */
+
+.download-btn{
+display:inline-block;
+padding:15px 35px;
+background:#00c6ff;
+color:black;
+font-weight:bold;
+border-radius:30px;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+}
+
+.download-btn:hover{
+transform:scale(1.05);
+}
+
+.web-btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:yellow;
+color:black;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+/* SCREENSHOTS */
+
+.screenshots{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.screenshots img{
+width:220px;
+border-radius:15px;
+box-shadow:0 0 10px black;
+}
+
+/* INSTALL GUIDE */
+
+.install{
+margin-top:40px;
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+display:inline-block;
+text-align:left;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:60px;
+background:#111;
+padding:25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<h2>Alsha Labs</h2>
+
+<div>
+<a href="index.html">Home</a>
+</div>
+
+</nav>
+
+
+<div class="container">
+
+<img src="app-icon.png" class="app-icon">
+
+<h1>AlshaBill</h1>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ 4.9 Rating
+</div>
+
+<p class="info">
+Smart billing & shop management app for businesses.
+</p>
+
+
+<a href="https://drive.google.com/uc?export=download&id=1DUxKNnHmsuoKyVzsr-Cx3wOCxIc0CB3g"
+class="download-btn"
+onclick="increaseDownload()">
+Download APK
+</a>
+
+<br>
+
+<a href="https://shop-flow-1e7c8832.base44.app"
+target="_blank"
+class="web-btn">
+Use on Laptop (Web Version)
+</a>
+
+
+<h2 style="margin-top:40px;">App Screenshots</h2>
+
+<div class="screenshots">
+
+<img src="s1.png">
+<img src="s2.png">
+<img src="s3.png">
+
+</div>
+
+
+<div class="install">
+
+<h3>📱 Install Guide</h3>
+
+<p>
+1️⃣ Download APK<br>
+2️⃣ Open downloaded file<br>
+3️⃣ Allow "Install Unknown Apps"<br>
+4️⃣ Install AlshaBill
+</p>
+
+</div>
+
+
+<h3 style="margin-top:30px;">
+⬇ Downloads: <span id="counter">1523</span>
+</h3>
+
+</div>
+
+
+<footer>
+
+© 2026 Alsha Labs | Founder: Mohammad Shahbaz
+
+</footer>
+
+
+<script>
+
+let count=1523
+
+function increaseDownload(){
+
+count++
+
+document.getElementById("counter").innerText=count
+
+}
+
+</script>
+
+
+</body>
+</html>
