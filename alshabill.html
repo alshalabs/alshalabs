@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlshaBill - Download</title><style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+
+body{
+  background:linear-gradient(135deg,#0f0f1a,#1a1a2e);
+  color:white;
+  text-align:center;
+}
+
+/* Container */
+.container{
+  padding:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+/* App Header */
+.app-header{
+  margin-top:20px;
+}
+
+.app-header img{
+  width:90px;
+  border-radius:20px;
+}
+
+.app-header h1{
+  margin-top:10px;
+  font-size:28px;
+}
+
+.app-header p{
+  color:#94a3b8;
+}
+
+/* Stats */
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin:20px 0;
+}
+
+.stat{
+  background:rgba(255,255,255,0.05);
+  padding:10px 15px;
+  border-radius:10px;
+}
+
+/* Button */
+.btn{
+  background:linear-gradient(45deg,#7c3aed,#8b5cf6);
+  padding:14px 30px;
+  border-radius:12px;
+  color:white;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:15px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* Slider */
+.slider-container{
+  overflow:hidden;
+  margin:30px 0;
+}
+
+.slider{
+  display:flex;
+  gap:15px;
+  animation:slide 12s linear infinite;
+}
+
+.slider img{
+  width:200px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Animation */
+@keyframes slide{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+/* Section */
+.section{
+  margin-top:30px;
+}
+
+/* Glass box */
+.glass{
+  background:rgba(255,255,255,0.05);
+  padding:15px;
+  border-radius:12px;
+  backdrop-filter:blur(10px);
+}
+
+/* Reviews */
+input,textarea{
+  width:90%;
+  margin:10px;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+}
+
+/* Responsive */
+@media(min-width:768px){
+  .slider img{width:250px;}
+}
+</style></head><body><div class="container"><!-- App Info --><div class="app-header">
+  <img src="app-icon.png">
+  <h1>AlshaBill</h1>
+  <p>Smart Billing & Inventory App</p>
+</div><!-- Stats --><div class="stats">
+  <div class="stat"><b id="downloads">0</b><br>Downloads</div>
+  <div class="stat">4.8 ⭐<br>Rating</div>
+  <div class="stat">Business<br>Category</div>
+</div><!-- Download --><a href="https://drive.google.com/uc?export=download&id=1DUxKNnHmsuoKyVzsr-Cx3wOCxIc0CB3g" class="btn">
+⬇ Download APK
+</a><!-- Screenshots --><div class="section">
+<h2>Screenshots</h2><div class="slider-container">
+<div class="slider">
+<img src="s1.png">
+<img src="s2.png">
+<img src="s3.png">
+<img src="s4.png"><img src="s1.png">
+<img src="s2.png">
+<img src="s3.png">
+<img src="s4.png">
+</div>
+</div>
+</div><!-- Live App --><div class="section glass">
+<h2>Try Web Version</h2>
+<a href="https://shop-flow-1e7c8832.base44.app" class="btn">Open App</a>
+</div><!-- Reviews --><div class="section">
+<h2>User Reviews</h2><input type="text" id="name" placeholder="Your Name">
+<textarea id="review" placeholder="Write your review"></textarea>
+<br>
+<button class="btn" onclick="saveReview()">Submit</button><div id="reviews"></div>
+</div><!-- Privacy --><div class="section glass">
+<h2>Privacy Policy</h2>
+<p>
+We respect your privacy. No personal data is shared. All data is secure and used only for app functionality.
+</p>
+</div></div><script>
+let d = localStorage.getItem("downloads") || 120;
+document.getElementById("downloads").innerText = d;
+
+function saveReview(){
+let name=document.getElementById("name").value;
+let review=document.getElementById("review").value;
+
+let data=localStorage.getItem("reviews")||"";
+data+=`<div class='glass'><b>${name}</b><p>${review}</p></div>`;
+localStorage.setItem("reviews",data);
+
+document.getElementById("reviews").innerHTML=data;
+}
+
+document.getElementById("reviews").innerHTML=localStorage.getItem("reviews")||"";
+</script></body>
+</html>
