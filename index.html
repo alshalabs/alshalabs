@@ -1,109 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlshaLabs</title><style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+html{scroll-behavior:smooth;}
 
-  <!-- SEO Title -->
-  <title>AlshaBill - Best Billing App for Shop | Download APK</title>
+body{background:#0f0f1a;color:white;}
 
-  <!-- SEO Description -->
-  <meta name="description" content="Download AlshaBill billing app APK. Manage invoices, stock, and shop easily. Free billing software for small businesses.">
+/* Navbar */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 20px;
+  background:#0a0a14;
+  position:sticky;
+  top:0;
+}
+nav h1{color:#a78bfa;}
+nav a{color:white;margin-left:15px;text-decoration:none;}
+nav a:hover{color:#a78bfa;}
 
-  <!-- Keywords -->
-  <meta name="keywords" content="AlshaBill, billing app, invoice app, shop management, APK download, free billing software">
+/* Hero */
+.hero{text-align:center;padding:60px 20px;}
+.hero h2{font-size:32px;}
+.hero p{color:#94a3b8;margin:15px 0;}
 
-  <!-- Author -->
-  <meta name="author" content="AlshaLabs">
+.btn{
+  background:#7c3aed;
+  padding:10px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+}
 
-  <!-- Favicon -->
-  <link rel="icon" href="logo.png">
+/* Sections */
+section{padding:50px 20px;text-align:center;}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-    }
-    header {
-      background: linear-gradient(90deg, #4b3cff, #7a5cff);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-    p {
-      font-size: 16px;
-    }
-    .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #4b3cff;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-  </style>
-</head>
+.card{
+  background:#1a1a2e;
+  padding:20px;
+  border-radius:12px;
+  margin:10px auto;
+  max-width:300px;
+  transition:0.3s;
+}
+.card:hover{transform:translateY(-5px);}
 
-<body>
+/* Footer */
+footer{
+  background:#0a0a14;
+  padding:20px;
+  text-align:center;
+  color:#94a3b8;
+}
 
-<header>
-  <h1>Download AlshaBill Billing App</h1>
-  <p>Best Billing App for Shop Owners - Invoice, Stock & Profit Management</p>
-  <a href="https://drive.google.com/uc?export=download&id=1DUxKNnHmsuoKyVzsr-Cx3wOCxIc0CB3g" class="btn">Download APK</a>
-</header>
-
-<div class="container">
-
-  <div class="card">
-    <h2>About AlshaBill</h2>
-    <p>
-      AlshaBill is a powerful billing app designed for shop owners and small businesses.
-      It helps you create invoices, manage stock, track profit, and run your business smoothly.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Features of AlshaBill</h2>
-    <ul>
-      <li>Create professional invoices instantly</li>
-      <li>Manage stock and products easily</li>
-      <li>Track profit and sales reports</li>
-      <li>Fast and easy billing system</li>
-      <li>Works offline and online</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Why Choose AlshaBill?</h2>
-    <p>
-      AlshaBill is one of the best billing apps for small business owners.
-      It is simple, fast, and designed for real shop needs.
-    </p>
-  </div>
-
+/* Responsive */
+@media(min-width:768px){
+  .hero h2{font-size:42px;}
+}
+</style></head><body><nav>
+<h1>AlshaLabs</h1>
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#apps">Apps</a>
+<a href="#contact">Contact</a>
 </div>
-
-<footer style="text-align:center; padding:20px; font-size:14px;">
-  © 2026 AlshaLabs | All Rights Reserved
-</footer>
-
-</body>
+</nav><section id="home" class="hero">
+<h2>Building Smart Software</h2>
+<p>Modern tools for billing & business</p>
+<a href="#apps" class="btn">Explore Apps</a>
+</section><section id="about">
+<h2>About Us</h2>
+<p>AlshaLabs is a software company building smart business tools.</p>
+<p><strong>Founder:</strong> Muhammad Shahbaz</p>
+</section><section id="apps">
+<h2>Our Apps</h2><div class="card">
+<h3>AlshaBill</h3>
+<p>Billing & Inventory App</p>
+<br>
+<a href="alshabill.html" class="btn">View & Download</a>
+</div></section><section id="contact">
+<h2>Contact</h2>
+<p>Email: alshalabs.official@gmail.com</p>
+</section><footer>
+© 2026 AlshaLabs
+</footer></body>
 </html>
