@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice</title>
+
+<style>
+body{
+  background:#0f0f1a;
+  color:white;
+  font-family:sans-serif;
+  padding:20px;
+  text-align:center;
+}
+
+.container{
+  max-width:600px;
+  margin:auto;
+  background:#1a1a2e;
+  padding:20px;
+  border-radius:15px;
+}
+
+h1{margin-bottom:20px;}
+
+.invoice-box{
+  background:rgba(255,255,255,0.05);
+  padding:15px;
+  border-radius:10px;
+  text-align:left;
+}
+
+.btn{
+  margin-top:20px;
+  padding:10px 20px;
+  background:#7c3aed;
+  border:none;
+  border-radius:10px;
+  color:white;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Invoice</h1>
+
+<div id="invoiceData" class="invoice-box">
+Loading...
+</div>
+
+<button class="btn" onclick="window.print()">Download / Print</button>
+
+</div>
+
+<script>
+// URL se data nikao
+let params = new URLSearchParams(window.location.search);
+let data = params.get("data");
+
+if(data){
+  let decoded = atob(data); // decode base64
+  document.getElementById("invoiceData").innerHTML = decoded;
+}else{
+  document.getElementById("invoiceData").innerHTML = "Invalid Invoice Link";
+}
+</script>
+
+</body>
+</html>
